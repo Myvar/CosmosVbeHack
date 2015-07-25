@@ -1,0 +1,14 @@
+﻿[Plug(Target = typeof(::{NAME}::))]
+public class ASMPlug
+{
+	[Inline]
+	public void Execute()
+	{
+::{PLUG}::
+	}
+}
+public class ::{NAME}::
+{
+	public void Execute()	{ } //Plugged
+}
+~new Cosmos.Assembler.LiteralAssemblerCode("::{ASM}::");
